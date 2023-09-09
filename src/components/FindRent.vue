@@ -1,42 +1,49 @@
 <template>
-  <v-row class="mt-5 mx-2">
-    <v-col cols="5">
-      <!-- Search input -->
-      <v-row>
-        <v-col cols="11">
-      <input
-        type="text"
-        v-model="searchQuery"
-        placeholder="Search"
-        class="rounded-input"
-        @focus="onInputFocus"
-        @blur="onInputBlur"
-      />
-    </v-col><v-col><v-icon>mdi-plus</v-icon></v-col>
-    </v-row>
-      <br />
-      <v-row class="mx-2"><h4>Spots Found:</h4> {{rentalData.length}}</v-row>
-      <v-divider class="mt-4"></v-divider>
-      <!-- Scrollable container for filtered RentCards components -->
-      <div class="scrollable-container mt-2">
-        <!-- Use a v-for loop to iterate over filteredRentals and create RentCards components -->
-        <div v-for="(rental, index) in rentalData" :key="index">
-          <RentCards
-            :locationName="rental.locationName"
-            :distance="rental.distance"
-            :rating="rental.rating"
-            :address="rental.address"
-            :price="rental.price"
-            :status="rental.status"
-          />
-          <br />
+  <v-container fluid>
+    <v-row class="mt-5 mx-2">
+      <v-col cols="12" sm="6"> <!-- Use full width on mobile and half on small screens -->
+        <!-- Search input -->
+        <v-row>
+          <v-col cols="10">
+            <input
+              type="text"
+              v-model="searchQuery"
+              placeholder="Search"
+              class="rounded-input"
+              @focus="onInputFocus"
+              @blur="onInputBlur"
+            />
+          </v-col>
+          <v-col cols="2">
+            <v-icon>mdi-plus</v-icon>
+          </v-col>
+        </v-row>
+        <br />
+        <v-row class="mx-2">
+          <h4>Spots Found:</h4> {{ rentalData.length }}
+        </v-row>
+        <v-divider class="mt-4"></v-divider>
+        <!-- Scrollable container for filtered RentCards components -->
+        <div class="scrollable-container mt-2">
+          <!-- Use a v-for loop to iterate over filteredRentals and create RentCards components -->
+          <div v-for="(rental, index) in filteredRentals" :key="index">
+            <RentCards
+              :locationName="rental.locationName"
+              :distance="rental.distance"
+              :rating="rental.rating"
+              :address="rental.address"
+              :price="rental.price"
+              :status="rental.status"
+            />
+            <br />
+          </div>
         </div>
-      </div>
-    </v-col>
-    <v-col >
-      <Map :searchPlace="searchQuery"/>
-    </v-col>
-  </v-row>
+      </v-col>
+      <v-col cols="12" sm="6"> <!-- Use full width on mobile and half on small screens -->
+        <Map :searchPlace="searchQuery" />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
