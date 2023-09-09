@@ -1,7 +1,7 @@
 const consts = {
     TITLE: "PMC",
     HOME: "HOME",
-    ADMIN: "ADMIN",
+    FIND_SPOT: "Find the Spot",
     EDIT_TEAM_MEMBERS: "My Profile",
     COMING_SOON: "Coming Soon",
     APP_DARK_COLOR: "#2a3042",

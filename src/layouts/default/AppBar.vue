@@ -38,8 +38,9 @@ export default {
       consts: consts,
       navItems: [
         { title: consts.HOME, route: "/" },
+        { title: consts.FIND_SPOT, route: "/find-rent" },
         { title: consts.EDIT_TEAM_MEMBERS, route: "/myteam" },
-        { title: consts.ADMIN, route: "/admin/create-team" },
+        
         { title: consts.COMING_SOON, route: "/coming-soon" },
       ],
     };
