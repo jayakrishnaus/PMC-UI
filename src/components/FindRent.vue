@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row class="mt-5 mx-2">
-      <v-col cols="12" sm="6"> <!-- Use full width on mobile and half on small screens -->
+      <v-col cols="12" sm="4"> <!-- Use full width on mobile and half on small screens -->
         <!-- Search input -->
         <v-row>
           <v-col cols="10">
@@ -39,7 +39,7 @@
           </div>
         </div>
       </v-col>
-      <v-col cols="12" sm="6"> <!-- Use full width on mobile and half on small screens -->
+      <v-col cols="12" sm="8"> <!-- Use full width on mobile and half on small screens -->
         <Map :searchPlace="searchQuery" />
       </v-col>
     </v-row>

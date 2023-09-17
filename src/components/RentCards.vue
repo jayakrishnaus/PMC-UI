@@ -14,8 +14,8 @@
       
       <v-card-text>
         <v-row>
-          <v-col cols="12">
-            <div class="text-center">
+          <v-col cols="3">
+            <div >
               <v-icon color="green">mdi-star</v-icon>
               <span class="rating">{{ rating }}/5</span>
             </div>
@@ -23,8 +23,9 @@
         </v-row>
         
         <v-row>
-          <v-col cols="12">
-            <div class="text-center">
+          <v-col cols="6">
+            <div>
+              <v-icon color="green">mdi-map-marker-outline</v-icon>
               {{ address }}
             </div>
           </v-col>

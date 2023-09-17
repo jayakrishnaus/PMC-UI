@@ -5,7 +5,7 @@
       <div class="navbar-content">
         <div
           class="title"
-          style="cursor: pointer; color: rgb(232, 216, 216)"
+          style="cursor: pointer; color: rgb(63, 19, 193)"
           @click="redirectToRoot"
         >
           {{ consts.TITLE }}
