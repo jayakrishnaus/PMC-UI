@@ -57,7 +57,7 @@
                     v-if="step ==2"
                     color="blue"
                     variant="tonal"
-                   
+                    href="/rent-spot"
                   >
                     Get Started
                   </v-btn>

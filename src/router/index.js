@@ -2,6 +2,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Homepage from '@/views/Home'
 import FindRent from '@/views/FindRent'
+import RentSpot from '@/views/RentSpot'
 const routes = [
   {
     path: '/',
@@ -28,6 +29,20 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: FindRent,
+      },
+    ],
+  },
+  {
+    path: '/rent-spot',
+    component: () => import('@/layouts/default/Default.vue'),
+    children: [
+      {
+        path: '/rent-spot',
+        name: 'Rent Spot',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: RentSpot,
       },
     ],
   },
